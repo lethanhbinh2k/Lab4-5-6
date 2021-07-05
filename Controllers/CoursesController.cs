@@ -20,6 +20,8 @@ namespace BigSchool.Controllers
         }
 
         [Authorize]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
 
 
         public ActionResult Create()
@@ -31,9 +33,7 @@ namespace BigSchool.Controllers
             return View(viewModel);
         }
 
-        [Authorize]
-        [HttpPost]
-        [ValidateAntiForgeryToken]
+       
         public ActionResult Create(CourseViewModel viewModel)
         {
             if (!ModelState.IsValid)
@@ -50,6 +50,7 @@ namespace BigSchool.Controllers
             };
             _dbContext.Courses.Add(course);
             _dbContext.SaveChanges();
+
             return RedirectToAction("Index", "Home");
         }
     }
