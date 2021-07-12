@@ -23,16 +23,20 @@ textarea {
     max-width: 280px;
 }
 
-.course {
+.course 
+{
     list-style: none
 }
 
-    .course > li {
+    .course > li 
+    {
         position: relative;
         margin-bottom: 30px;
     }
 
-        .course > li .date {
+
+        .course > li .date 
+        {
             text-align: center;
             background-color: #ff6a00;
             color: white;
@@ -40,16 +44,21 @@ textarea {
             border-radius: 8px;
         }
 
-.course > li .details {
-    position: absolute;
-    top: 0;
-    left: 70px;
-}
-.course > li .action{
-    display:none;
-    left:70px;
-    position:absolute;
-}
-.course > li:hover .action{
-    display:block;
-}
+        .course > li .details 
+        {
+            position: absolute;
+            top: 0;
+            left: 70px;
+        }
+
+        .course > li .action 
+        {
+            display: none;
+            left: 70px;
+            position: absolute;
+        }
+
+        .course > li:hover .action 
+        {
+            display: block;
+        }
